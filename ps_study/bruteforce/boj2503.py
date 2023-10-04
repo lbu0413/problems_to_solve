@@ -6,8 +6,8 @@ hint = [list(map(int, input().split())) for i in range(questions)]
 
 answer = 0
 for a in range(1, 10):
-    for b in range(10):
-        for c in range(10):
+    for b in range(1, 10):
+        for c in range(1, 10):
                 if (a == b or b == c or c == a):
                      continue
                 
