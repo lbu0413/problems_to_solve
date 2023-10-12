@@ -1,6 +1,6 @@
 N, M = map(int, input().split())
 tracks = list(map(int, input().split()))
-
+max_track = max(tracks)
 
 left = 1
 right = sum(tracks)
@@ -23,12 +23,11 @@ def putting_tracks(storage):
 ans = 0
 while left <= right:
     mid = (left + right) // 2
-    if putting_tracks(mid) <= M:
+    if mid > max_track and putting_tracks(mid) <= M:
         ans = mid
         right = mid - 1
 
     else:
         left = mid + 1
-
 
 print(ans)
