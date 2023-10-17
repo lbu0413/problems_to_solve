@@ -2,12 +2,13 @@ def preDFS(v):
     if v > 7:
         return
     else:
-        print(v)
+        print(v, end=" ")
         preDFS(v * 2)
         preDFS(v * 2 + 1)
 
 
 preDFS(1)
+print()
 
 
 def inDFS(v):
@@ -15,11 +16,12 @@ def inDFS(v):
         return
     else:
         inDFS(v * 2)
-        print(v)
+        print(v, end=" ")
         inDFS(v * 2 + 1)
 
 
 inDFS(1)
+print()
 
 
 def postDFS(v):
@@ -28,7 +30,8 @@ def postDFS(v):
     else:
         postDFS(v * 2)
         postDFS(v * 2 + 1)
-        print(v)
+        print(v, end=" ")
 
 
 postDFS(1)
+print()
