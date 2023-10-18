@@ -12,6 +12,9 @@ def dfs(level, current):
     if current > M:
         return
 
+    if level > total:
+        return
+
     if current == M:
         if level < total:
             total = level
