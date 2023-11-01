@@ -17,6 +17,8 @@ def reverse(x):
 
 
 def isPrime(x):
+    if x == 1:
+        return False
     for i in range(2, x // 2 + 1):
         if x % i == 0:
             return False
@@ -26,5 +28,5 @@ def isPrime(x):
 
 for x in nums:
     reversed_ = reverse(x)
-    if isPrime(reversed_) and reversed_ != 1:
+    if isPrime(reversed_):
         print(reversed_, end=" ")
